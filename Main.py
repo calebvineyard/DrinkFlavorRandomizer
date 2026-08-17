@@ -7,12 +7,15 @@ def randomizer():
         print(tropicalArr[random.randint(0, len(tropicalArr) - 1)])
     elif fp == 3:
         print(fruityArr[random.randint(0, len(fruityArr) - 1)])
+    elif fp == 4:
+        print(candyArr[random.randint(0, len(candyArr) - 1)])
 
 
 # Flavor Profile Arrays
 sweetArr = ["Vanilla", "Cookie Butter", "Almond", "Salted Caramel", "Chocolate Macadamia Nut", "Toasted Marshmallow"]
 tropicalArr = ["Pomegranate", "Passion Fruit", "Coconut", "Kiwi", "Pineapple", "Banana", "Guava"]
 fruityArr = ["Strawberry", "Watermelon", "Blue Ras", "Blackberry", "Orange", "Peach"]
+candyArr = ["Blue Raspberry", "Green Apple", "Watermelon", "Raspberry", "Strawberry", "Peach"]
 
 print("Barista Roulette")
 print("----------------")
