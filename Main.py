@@ -3,6 +3,7 @@ import random
 def randomizer():
     if fp == 1:
         print(sweetArr[random.randint(0, len(sweetArr) - 1)])
+
     elif fp == 2:
         print(tropicalArr[random.randint(0, len(tropicalArr) - 1)])
     elif fp == 3:
@@ -13,6 +14,7 @@ def randomizer():
 
 # Flavor Profile Arrays
 sweetArr = ["Vanilla", "Cookie Butter", "Almond", "Salted Caramel", "Chocolate Macadamia Nut", "Toasted Marshmallow"]
+sweetArrWCream = ["Vanilla", "Cookie Butter", "Almond", "Salted Caramel", "Chocolate Macadamia Nut", "Toasted Marshmallow", "Cream", "Sweet Cream", "Coconut Milk"]
 tropicalArr = ["Pomegranate", "Passion Fruit", "Coconut", "Kiwi", "Pineapple", "Banana", "Guava"]
 fruityArr = ["Strawberry", "Watermelon", "Blue Ras", "Blackberry", "Orange", "Peach"]
 candyArr = ["Blue Raspberry", "Green Apple", "Watermelon", "Raspberry", "Strawberry", "Peach"]
@@ -30,11 +32,18 @@ print()
 
 fp = int(input("Enter your choice: "))
 flavorAmount = int(input("Enter your flavor amount: "))
+sweetCrm = input("Would you like to add cream as an option? (Y/N)")
+
 
 while (fp < 1 or fp > 4):
     print()
     print("Please enter a valid choice!")
     fp = int(input("Enter your choice: "))
 
-for i in range (flavorAmount):
-    randomizer()
+
+if sweetCrm == "Y":
+    for i in range(flavorAmount):
+        print(sweetArrWCream[random.randint(0, len(sweetArrWCream) - 1)])
+else:
+    for i in range (flavorAmount):
+        randomizer()
